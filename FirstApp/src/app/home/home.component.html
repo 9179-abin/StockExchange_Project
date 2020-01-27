@@ -1,0 +1,55 @@
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
+        <a href="#" class="navbar-brand"><img src="../assets/logo.png" alt="logo" height="30px" width="30px"></a>
+        <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+        
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#"  class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Services</a>
+            </li>
+            
+            
+            <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+            
+        </ul>
+        <ul class="navbar-nav">
+        <li class="nav-item"><a routerLink="register" routerLinkActive="active" 
+            class="btn btn-success">
+                 New User</a>
+        </li>
+        </ul>
+        <ul class="navbar-nav" style="padding-left: 10px; padding-top: 5px;">
+            <li class="nav-item"><a routerLink="login" routerLinkActive="active" 
+                class="btn btn-success">
+                     Login</a>
+            </li>
+            </ul>
+    </div>
+</nav>
+<div class="container p-3" style="width: auto;">
+    <div class= "row m-4">
+      <div class="col" style="height: 50vh;">
+    <div class="jumbotron-fluid shadow bg-dark" style="padding: 50px;">
+        <div class="card shadow bg-dark float-right" style="padding: 10px;"><img src="../assets/logo.png" class="img-thumbnail" width="300" height="80" ></div>
+         <p class="text-justify lead  text-white"><b>A stock exchange</b>, securities exchange or bourse is a facility where stockbrokers 
+           and traders can buy and sell securities, such as shares of stock and bonds and other financial instruments.
+            Stock exchanges may also provide facilities for the issue and redemption of such securities and instruments 
+            and capital events including the payment of income and dividends Securities traded on a stock exchange include 
+            stock issued by listed companies, unit trusts, derivatives, pooled investment products and bonds. Stock exchanges 
+            often function as "continuous auction" markets with buyers and sellers consummating transactions via open outcry 
+            at a central location such as the floor of the exchange or by using an electronic trading platform.
+  
+         </p></div></div>
+          
+          </div></div> 
