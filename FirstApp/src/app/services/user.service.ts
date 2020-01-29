@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  users = USERS;
+  // users = USERS;
   httpUrl='http://localhost:3000/users/';
   constructor(private httpClient: HttpClient) { }
 
@@ -20,5 +20,11 @@ export class UserService {
   }
   deleteUser(id:number): Observable<User> {
     return this.httpClient.delete<User>(this.httpUrl+ id);
+  }
+  updateUserInfo(user:User): Observable<User> {
+    return this.httpClient.put<User>(this.httpUrl+user.id,user);
+  } 
+  getUserById(id:number): Observable<User> {
+    return this.httpClient.get<User>(this.httpUrl+id);
   }
 }

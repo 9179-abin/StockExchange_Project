@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <a href="#" class="navbar-brand"><img src="../assets/logo.png" alt="logo" height="30px" width="30px"></a>
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+   
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="#"  class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Services</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a href='upload' class="nav-link">Contact</a>
+        </li>
+        
+    </ul>
+    </div>
+</nav>
+
+
+<br>
+   <div class="container text-light" style="width:500px;">
+<div class="row-m-4">
+    <h2 class="text-light text-center">Update User Details</h2>
+    <form [formGroup]="updateUser">
+     
+      <div class="form-group">
+        <label for="id">User Id:</label>
+        <input type="number" formControlName="id" placeholder="User Id" name="id" class="form-control" id="id" >
+      </div>
+      <div class="form-group">
+        <label for="courseName">User Name:</label>
+        <input formControlName="name" placeholder="User Name" name="name" class="form-control" id="courseName">
+      </div>
+       <div class="form-group">
+        <label for="courseDuration">Password:</label>
+        <input type="password" formControlName="password1" placeholder=" " name="password" class="form-control" id="password1">
+      </div>
+       <div class="form-group">
+        <label for="courseEligibility">Re-Enter Password:</label>
+        <input type="password" formControlName="password2" placeholder="" name="rpassword" class="form-control" id="password2">
+      </div>
+      <div class="form-group">
+        <label for="courseFee">Email:</label>
+        <input type="email" formControlName="email" placeholder="name@gmail.com" name="email" class="form-control" id="email">
+      </div>
+  
+  
+  
+      <div class="text-center"><button class="btn btn-success" (click)="UpdateUser(user)">Update Course</button></div>
+    </form>
+  </div></div>

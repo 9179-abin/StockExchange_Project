@@ -3,16 +3,10 @@
     {
       "id": 101,
       "name": "Dean",
-      "password1": "dghfjur",
+      "password1": "098uio",
+      "password2": "098uio",
       "email": "dean@gmail.com",
       "phone": 98634521
-    },
-    {
-      "id": 102,
-      "name": "Danny",
-      "password1": "ytrebjkf",
-      "email": "danny@gmail.com",
-      "phone": 89644521
     },
     {
       "id": 1234,
@@ -32,10 +26,10 @@
     },
     {
       "id": 5678,
-      "name": "Sam",
+      "name": "David",
       "password1": "iop098",
       "password2": "iop098",
-      "email": "sam@gmail.com",
+      "email": "david@gmail.com",
       "phone": "5632145"
     }
   ]

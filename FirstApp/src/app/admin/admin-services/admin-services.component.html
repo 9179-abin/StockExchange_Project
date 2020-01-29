@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <a href="#" class="navbar-brand"><img src="../assets/logo.png" alt="logo" height="30px" width="30px"></a>
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+   
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="#"  class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Services</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a href='upload' class="nav-link">Contact</a>
+        </li>
+        
+    </ul>
+    </div>
+</nav>
+ 
+  <div class="container" style="width:auto;">
+    <div class="row m-4">
+        <div class="col" style="height: 70vh;">
+                <div class="card shadow">
+                    <p class="h4 card-header text-center">Services</p>
+                    <div class="card-body bg-light">
+
+                        <p class="card-text">Select Services:&nbsp;</p>
+                        <a class="btn btn-success btn-block">Add Company & Stock</a>
+                        <a class="btn btn-success btn-block" routerLink="view">User List</a>
+                        <a class="btn btn-success btn-block" href='update-user'>Update User</a>
+                        <a class="btn btn-success btn-block">Update Company</a>
+                        <a class="btn btn-success btn-block">Update IPO</a>
+                        <a class="btn btn-success btn-block" routerLink="upload" >Upload Stock</a>
+        </div>
+    </div>
+</div></div></div>

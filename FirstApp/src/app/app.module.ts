@@ -10,6 +10,8 @@ import { LoginComponent } from './common/login/login.component';
 import { UploadComponent } from './admin/upload/upload.component';
 import { ViewComponent } from './admin/view/view.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminServicesComponent } from './admin/admin-services/admin-services.component';
+import { UpdateUserComponent } from './admin/update-user/update-user.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     LoginComponent,
     UploadComponent,
-    ViewComponent
+    ViewComponent,
+    AdminServicesComponent,
+    UpdateUserComponent
     
   ],
   imports: [

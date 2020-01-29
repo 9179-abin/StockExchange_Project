@@ -5,6 +5,8 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './common/login/login.component';
 import { UploadComponent } from './admin/upload/upload.component';
 import { ViewComponent } from './admin/view/view.component';
+import { AdminServicesComponent } from './admin/admin-services/admin-services.component';
+import { UpdateUserComponent } from './admin/update-user/update-user.component';
 
 
 const routes: Routes = [
@@ -12,7 +14,11 @@ const routes: Routes = [
   {path:'register', component:RegisterComponent},
   {path:'login' , component:LoginComponent},
   {path:'upload' , component:UploadComponent},
-  {path:'view', component:ViewComponent}
+  {path:'view', component:ViewComponent},
+  {path:'adminservices', component:AdminServicesComponent},
+  {path:'adminservices/upload', component:UploadComponent},
+  {path:'adminservices/view', component:ViewComponent},
+  {path:'update-user',component:UpdateUserComponent}
 ];
 
 @NgModule({
