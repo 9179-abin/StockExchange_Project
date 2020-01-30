@@ -12,6 +12,9 @@ import { ViewComponent } from './admin/view/view.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminServicesComponent } from './admin/admin-services/admin-services.component';
 import { UpdateUserComponent } from './admin/update-user/update-user.component';
+import { AddCompanyComponent } from './admin/add-company/add-company.component';
+import { ViewCompanyComponent } from './admin/view-company/view-company.component';
+import { UpdateCompanyComponent } from './admin/update-company/update-company.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { UpdateUserComponent } from './admin/update-user/update-user.component';
     UploadComponent,
     ViewComponent,
     AdminServicesComponent,
-    UpdateUserComponent
+    UpdateUserComponent,
+    AddCompanyComponent,
+    ViewCompanyComponent,
+    UpdateCompanyComponent
     
   ],
   imports: [

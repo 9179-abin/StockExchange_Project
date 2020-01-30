@@ -31,7 +31,7 @@ export class UpdateUserComponent implements OnInit {
       email: ['', Validators.required],
       phone: ['', Validators.required]
 
-    })
+    });
     const id = localStorage.getItem('userId');
     if(+id > 0){
       this.UserService.getUserById(+id).subscribe(user =>{

@@ -7,6 +7,9 @@ import { UploadComponent } from './admin/upload/upload.component';
 import { ViewComponent } from './admin/view/view.component';
 import { AdminServicesComponent } from './admin/admin-services/admin-services.component';
 import { UpdateUserComponent } from './admin/update-user/update-user.component';
+import { AddCompanyComponent } from './admin/add-company/add-company.component';
+import { ViewCompanyComponent } from './admin/view-company/view-company.component';
+import { UpdateCompanyComponent } from './admin/update-company/update-company.component';
 
 
 const routes: Routes = [
@@ -18,7 +21,11 @@ const routes: Routes = [
   {path:'adminservices', component:AdminServicesComponent},
   {path:'adminservices/upload', component:UploadComponent},
   {path:'adminservices/view', component:ViewComponent},
-  {path:'update-user',component:UpdateUserComponent}
+  {path:'update-user',component:UpdateUserComponent},
+  {path:'update-user/adminservices',component:AdminServicesComponent},
+  {path:'addcompany', component:AddCompanyComponent},
+  {path:'viewCompany', component:ViewCompanyComponent},
+  {path:'updateCompany',component:UpdateCompanyComponent}
 ];
 
 @NgModule({

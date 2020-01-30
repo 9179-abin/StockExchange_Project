@@ -1,0 +1,48 @@
+{
+  "company": [
+    {
+      "id": 102,
+      "name": "Cognizant",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": 687567,
+      "turnover": 9876543213,
+      "aboutCompany": "Good Company",
+      "stockExchange": "NYSE",
+      "sector": "IT"
+    },
+    {
+      "id": 132,
+      "name": "Wipro",
+      "city": "Kochi",
+      "state": "Kerala",
+      "pincode": 435436,
+      "turnover": 45764374,
+      "aboutCompany": "Good Company",
+      "stockExchange": "BSE",
+      "sector": "IT"
+    },
+    {
+      "id": 104,
+      "name": "Infosys",
+      "city": "Shollinganaloor",
+      "state": "Tamil Nadu",
+      "pincode": 786543,
+      "turnover": 456765876,
+      "aboutCompany": "Nice one",
+      "stockExchange": "NASDAQ",
+      "sector": "IT"
+    },
+    {
+      "id": 105,
+      "name": "Standard Chartered",
+      "city": "Shollinganaloor",
+      "state": "Tamil Nadu",
+      "pincode": 436677,
+      "turnover": 4563576534,
+      "aboutCompany": "Banking Company",
+      "stockExchange": "BSE",
+      "sector": "Finance"
+    }
+  ]
+}
