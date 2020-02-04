@@ -12,6 +12,7 @@ import { ViewCompanyComponent } from './admin/view-company/view-company.componen
 import { UpdateCompanyComponent } from './admin/update-company/update-company.component';
 import { AddIpoComponent } from './admin/add-ipo/add-ipo.component';
 import { ViewIPOComponent } from './admin/view-ipo/view-ipo.component';
+import { StockExchangeService } from './services/stock-exchange.service';
 
 
 const routes: Routes = [
@@ -29,7 +30,8 @@ const routes: Routes = [
   {path:'viewCompany', component:ViewCompanyComponent},
   {path:'updateCompany',component:UpdateCompanyComponent},
   {path:'addIpo',component:AddIpoComponent},
-  {path:'viewIpo' , component:ViewIPOComponent}
+  {path:'viewIpo' , component:ViewIPOComponent},
+  {path:'stockExchange', component:StockExchangeService}
 ];
 
 @NgModule({

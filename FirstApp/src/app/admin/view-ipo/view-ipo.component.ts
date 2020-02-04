@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { IPO } from 'src/app/models/ipo';
+import { IpoService } from 'src/app/services/ipo.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-ipo',
@@ -7,17 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewIPOComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ipoServices:IpoService, private router: Router) { }
   navbarOpen = false;
-  
+   ipo:IPO[];
   toggleNavbar() {
       this.navbarOpen = !this.navbarOpen;
     }
 
   ngOnInit() {
-      // this.companyService.getAllIPO().subscribe(data => {
-      // this.company=data;
+      this.ipoServices.getAllIPO().subscribe(data => {
+      this.ipo=data;
 
-  }
+      });
+    }
 
 }
