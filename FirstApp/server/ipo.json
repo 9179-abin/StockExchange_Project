@@ -1,0 +1,41 @@
+{
+    "ipo": [
+      {
+        "id": 100,
+        "name": "Cognizant",
+        "stockExchange": "NSE",
+        "priceShare": 567834562.00,
+        "noOfShare": 576,
+        "Address": "ASV IT Park, 2nd Floor, OMR Road",
+        "city": "Shollinganaloor",
+        "state": "Tamil Nadu",
+        "pincode": 686765,
+        "date":"02/12/2010"
+      },
+      {
+        "id": 101,
+        "name": "Wipro",
+        "stockExchange": "NSE",
+        "priceShare": 456464562.00,
+        "noOfShare": 406,
+        "Address": "ASV IT Park, 3rd Floor, OMR Road",
+        "city": "Shollinganaloor",
+        "state": "Tamil Nadu",
+        "pincode": 686765,
+        "date":"02/06/2010"
+      },
+      {
+        "id": 103,
+        "name": "Infosys",
+        "stockExchange": "NASDAQ",
+        "priceShare": 345664562.00,
+        "noOfShare": 325,
+        "Address": "Infosys Campus, Delton Street",
+        "city": "Mysore",
+        "state": "Karnataka",
+        "pincode": 786543,
+        "date":"02/06/2010"
+  
+        }
+    ]
+}

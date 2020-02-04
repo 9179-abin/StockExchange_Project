@@ -15,6 +15,8 @@ import { UpdateUserComponent } from './admin/update-user/update-user.component';
 import { AddCompanyComponent } from './admin/add-company/add-company.component';
 import { ViewCompanyComponent } from './admin/view-company/view-company.component';
 import { UpdateCompanyComponent } from './admin/update-company/update-company.component';
+import { AddIpoComponent } from './admin/add-ipo/add-ipo.component';
+import { ViewIPOComponent } from './admin/view-ipo/view-ipo.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { UpdateCompanyComponent } from './admin/update-company/update-company.co
     UpdateUserComponent,
     AddCompanyComponent,
     ViewCompanyComponent,
-    UpdateCompanyComponent
+    UpdateCompanyComponent,
+    AddIpoComponent,
+    ViewIPOComponent
     
   ],
   imports: [

@@ -10,8 +10,13 @@ import { Router } from '@angular/router';
 })
 export class UpdateCompanyComponent implements OnInit {
   updateCompany: FormGroup;
+  navbarOpen = false;
+  
+    toggleNavbar() {
+      this.navbarOpen = !this.navbarOpen;
+    }
   constructor(private formBuilder: FormBuilder, private companyService: CompanyService, private router: Router) { }
-  UpdateCompanyDetails(){
+  updateCompanyDetails(){
     this.companyService.updateCompanyInfo(this.updateCompany.value).subscribe(u => {
       this.router.navigate(['viewCompany']);
       
@@ -29,7 +34,7 @@ export class UpdateCompanyComponent implements OnInit {
       stockExchange: ['',Validators.required],
       sector : ['',Validators.required]
     });
-    const id = localStorage.getItem('userId');
+    const id = localStorage.getItem('CompanyId');
     if(+id > 0){
       this.companyService.getCompanyById(+id).subscribe(company =>{
         this.updateCompany.patchValue(company);

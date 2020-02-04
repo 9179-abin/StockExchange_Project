@@ -1,34 +1,33 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="collapse navbar-collapse">
-        <a href="#" class="navbar-brand"><img src="../assets/logo.png" alt="logo" height="30px" width="30px"></a>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a href="#" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-                <a href="#"  class="nav-link">About</a>
-            </li>
-            <div class="dropdown">
-            <li class="nav-item">
-                <button class="btn btn-dark btn-block dropdown-toggle" type="button" data-toggle="dropdown">
-                Services
-                </button>
-                <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Compare Charts</a>
-                <a class="dropdown-item" href="#">Update IPO</a>
-                <a class="dropdown-item" href="#">Daily Reports</a>
-                <a class="dropdown-item" href="#">Monthly Reports</a>
-                <a class="dropdown-item" href="#">Yearly Reports</a>
-        </div>
-            </li>
-            </div>
-            <li class="nav-item">
-                <a href="#"  class="nav-link">Contact</a>
-            </li>
-        </ul>
+    <a href="#" class="navbar-brand"><img src="../assets/logo.png" alt="logo" height="30px" width="30px"></a>
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+    
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="#"  class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Services</a>
+        </li>
+        
+        
+        <li class="nav-item">
+            <a href='upload' class="nav-link">Contact</a>
+        </li>
+        <li class="nav-item">
+            <a href='view' class="nav-link">View Users</a>
+        </li>
+        
+    </ul>
     </div>
 </nav>
-  <!-- <div class="container">
+  <div class="container">
     <div class="row m-4">
         <div class="col" style="height: 70vh;">
             <form class="pt-4">
@@ -71,4 +70,4 @@
             </form>
         </div>
     </div>
-</div> -->
+</div>

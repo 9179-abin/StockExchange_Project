@@ -10,6 +10,8 @@ import { UpdateUserComponent } from './admin/update-user/update-user.component';
 import { AddCompanyComponent } from './admin/add-company/add-company.component';
 import { ViewCompanyComponent } from './admin/view-company/view-company.component';
 import { UpdateCompanyComponent } from './admin/update-company/update-company.component';
+import { AddIpoComponent } from './admin/add-ipo/add-ipo.component';
+import { ViewIPOComponent } from './admin/view-ipo/view-ipo.component';
 
 
 const routes: Routes = [
@@ -25,7 +27,9 @@ const routes: Routes = [
   {path:'update-user/adminservices',component:AdminServicesComponent},
   {path:'addcompany', component:AddCompanyComponent},
   {path:'viewCompany', component:ViewCompanyComponent},
-  {path:'updateCompany',component:UpdateCompanyComponent}
+  {path:'updateCompany',component:UpdateCompanyComponent},
+  {path:'addIpo',component:AddIpoComponent},
+  {path:'viewIpo' , component:ViewIPOComponent}
 ];
 
 @NgModule({

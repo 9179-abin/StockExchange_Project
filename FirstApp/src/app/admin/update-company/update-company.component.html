@@ -27,14 +27,14 @@
     <p class="h4 card-header">Add Company Details</p>
     <div class="card-body bg-light">
         <p class="card-text h6">Please fill the details:</p>
-        <form [formGroup]="updateCompany" (ngSubmit)="onSubmit()">
-            <div class="input-group mt-3 mb-3">
+        <form [formGroup]="updateCompany">
+            <div class="form-group mt-3 mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text">Company Id</span>
                 </div>
                 <input type="number" id="uid" class="form-control" formControlName="id" />
             </div>
-            <div class="input-group mt-3 mb-3">
+            <div class="form-group mt-3 mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text">Company Name</span>
                 </div>
@@ -65,7 +65,7 @@
                   <input type="number" class="form-control" id="pincode" formControlName="pincode">
                 </div>
               </div>
-            <div class="input-group mb-3">
+            <div class="form-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text"> Turnover in Rs.</span>
                 </div>
@@ -74,13 +74,13 @@
                     <span class="input-group-text">.00</span>
                 </div>
             </div>
-            <div class="input-group mb-3">
+            <div class="form-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text">About Company</span>
                 </div>
                 <textarea class="form-control" aria-label="With textarea" id="aboutCompany" formControlName="aboutCompany"></textarea>
             </div>
-            <div class="input-group mb-3">
+            <div class="form-group mb-3">
                 <div class="input-group-prepend">
                     <label class="input-group-text">Options</label>
                 </div>
@@ -92,7 +92,7 @@
                     <option value="NYSE">NYSE</option>
                 </select>
             </div>
-            <div class="input-group mb-3">
+            <div class="form-group mb-3">
                 <div class="input-group-prepend">
                     <label class="input-group-text">Options</label>
                 </div>
@@ -106,7 +106,7 @@
             </div>
             <div class="text-center">
             <div class="col">
-                <button type="submit" class="btn btn-success" (click)="updateCompanyDetails()" [disabled]="!updateCompany.valid">Update</button>
+                <button type="submit" class="btn btn-success" (click)="updateCompanyDetails(company)" [disabled]="!updateCompany.valid">Update</button>
                 <button type="reset" class="btn btn-danger ml-2">Reset</button>
             </div></div>
            
