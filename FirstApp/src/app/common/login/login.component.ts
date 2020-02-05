@@ -10,11 +10,7 @@ export class LoginComponent implements OnInit {
 
   constructor() { }
   signupForm: FormGroup;
-  navbarOpen = false;
-  
-    toggleNavbar() {
-      this.navbarOpen = !this.navbarOpen;
-    }
+ 
   ngOnInit() {
   }
 

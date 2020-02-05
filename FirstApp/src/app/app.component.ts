@@ -9,6 +9,12 @@ import {FormsModule,FormGroup,FormControl} from '@angular/forms';
 })
 export class AppComponent {
   title = 'FirstApp';
+  isAdmin=false;
+  navbarOpen = false;
+  
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
+  }
   // user=new User(101,'Rahul','rahul@gmail.com',1234567890);
   // user1=new User(102,'Ram','ram@gmail.com',12396444);
   // user2=new User(103,'Ron','ron@gmail.com',123213433);

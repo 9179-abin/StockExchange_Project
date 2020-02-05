@@ -16,6 +16,15 @@ export class ViewIPOComponent implements OnInit {
   toggleNavbar() {
       this.navbarOpen = !this.navbarOpen;
     }
+    deleteIPO(ipo:IPO){
+      this.ipoServices.deleteIPODetails(ipo.id).subscribe();
+      this.ipo = this.ipo.filter(u => u!==ipo);
+    }
+    updateIPO(ipo:IPO){
+      localStorage.removeItem('ipoId');
+      localStorage.setItem('ipoId',ipo.id.toString());
+      this.router.navigate(['updateIPO']);
+  }
 
   ngOnInit() {
       this.ipoServices.getAllIPO().subscribe(data => {

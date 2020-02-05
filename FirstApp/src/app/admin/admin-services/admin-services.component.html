@@ -1,27 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-    <a href="#" class="navbar-brand"><img src="../assets/logo.png" alt="logo" height="30px" width="30px"></a>
-    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
-   
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-            <a href="#" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-            <a href="adminservices" class="nav-link">Services</a>
-        </li>
-        
-        
-        <li class="nav-item">
-            <a href='upload' class="nav-link">Contact</a>
-        </li>
-        
-    </ul>
-    </div>
-</nav>
- 
+
+  <button type = "button" class = "btn btn-success float-right btn-lg my-0 mx-3"  routerLink="home">Logout</button>
+  <hr>
   <div class="container" style="width:auto;">
     <div class="row m-4">
         <div class="col" style="height: 70vh;">
@@ -30,11 +9,11 @@
                     <div class="card-body bg-light">
 
                         <p class="card-text">Select Services:&nbsp;</p>
-                        <a class="btn btn-success btn-block" href="addcompany">Add Company</a>
+                        <a class="btn btn-success btn-block" routerLink="addcompany">Add Company</a>
                         <a class="btn btn-success btn-block" routerLink="view">User List</a>
-                        <a class="btn btn-success btn-block" href="viewCompany">Company List</a>
-                        <a class="btn btn-success btn-block" href="addIpo">Add IPO</a>
-                        <a class="btn btn-success btn-block" href="viewIpo">IPO List</a>
+                        <a class="btn btn-success btn-block" routerLink="viewCompany">Company List</a>
+                        <a class="btn btn-success btn-block" routerLink="addIpo">Add IPO</a>
+                        <a class="btn btn-success btn-block" routerLink="viewIpo">IPO List</a>
                         <a class="btn btn-success btn-block" routerLink="upload" >Upload Stock</a>
         </div>
     </div>

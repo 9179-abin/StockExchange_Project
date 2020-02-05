@@ -27,4 +27,7 @@ export class UserService {
   getUserById(id:number): Observable<User> {
     return this.httpClient.get<User>(this.httpUrl+id);
   }
+  isAdmin() : boolean{
+    return false;
+  }
 }

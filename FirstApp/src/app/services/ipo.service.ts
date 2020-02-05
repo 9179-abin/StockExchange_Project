@@ -15,4 +15,16 @@ export class IpoService {
    getAllIPO(): Observable <IPO[]> {
     return this.httpClient.get<IPO[]>(this.httpUrl);
   }
+  saveIPO(ipo:IPO): Observable<IPO>{
+    return this.httpClient.post<IPO>(this.httpUrl,ipo);
+  }
+  deleteIPODetails(id:number): Observable<IPO> {
+    return this.httpClient.delete<IPO>(this.httpUrl+ id);
+  }
+  updateIPOInfo(ipo:IPO): Observable<IPO> {
+    return this.httpClient.put<IPO>(this.httpUrl+ipo.id,ipo);
+  } 
+  getIPOById(id:number): Observable<IPO> {
+    return this.httpClient.get<IPO>(this.httpUrl+id);
+  }
 }

@@ -3,10 +3,10 @@
 <br>
 <div class="container">
 <div class="card shadow">
-    <p class="h4 card-header">Add IPO</p>
+    <p class="h4 card-header">Update IPO</p>
     <div class="card-body bg-light">
         <p class="card-text h6">Please fill the details:</p>
-        <form [formGroup]="addIPO" (ngSubmit)="onSubmit()">
+        <form [formGroup]="updateIPO">
             <div class="input-group mt-3 mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text">Id</span>
@@ -87,7 +87,7 @@
         <div class="d-flex no-gutters">
             <div class="container text-center">
             <div class="col">
-                <button type="submit" class="btn btn-success" (click)="addIPODetails()" [disabled]="!addIPO.valid">Submit</button>
+                <button type="submit" class="btn btn-success" (click)="updateIPODetails(ipo)" [disabled]="!updateIPO.valid">Update</button>
                 <button type="reset" class="btn btn-danger ml-2">Reset</button>
             </div></div>
         </div>

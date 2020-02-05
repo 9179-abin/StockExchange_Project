@@ -13,25 +13,42 @@ import { UpdateCompanyComponent } from './admin/update-company/update-company.co
 import { AddIpoComponent } from './admin/add-ipo/add-ipo.component';
 import { ViewIPOComponent } from './admin/view-ipo/view-ipo.component';
 import { StockExchangeService } from './services/stock-exchange.service';
+import { AuthGuard } from './auth.guard';
+import { UpdateIPOComponent } from './admin/update-ipo/update-ipo.component';
+import { UserlandingComponent } from './user/userlanding/userlanding.component';
 
 
 const routes: Routes = [
-  { path: '', component:HomeComponent },
+  {path: '', component:HomeComponent },
+  {path: 'home', component:HomeComponent },
   {path:'register', component:RegisterComponent},
   {path:'login' , component:LoginComponent},
   {path:'upload' , component:UploadComponent},
-  {path:'view', component:ViewComponent},
+  {path:'view', component:ViewComponent, canActivate: [AuthGuard]},
+  {path:'view/update-user', component:UpdateUserComponent},
   {path:'adminservices', component:AdminServicesComponent},
+  {path:'login/adminservices', component:AdminServicesComponent},
   {path:'adminservices/upload', component:UploadComponent},
   {path:'adminservices/view', component:ViewComponent},
+  {path:'adminservices/addcompany', component:AddCompanyComponent},
+  {path:'adminservices/viewCompany', component:ViewCompanyComponent},
+  {path:'adminservices/viewIpo', component:ViewIPOComponent},
+  {path:'adminservices/addIpo', component:AddIpoComponent},
+  {path:'login/adminservices/view', component:ViewComponent},
   {path:'update-user',component:UpdateUserComponent},
-  {path:'update-user/adminservices',component:AdminServicesComponent},
   {path:'addcompany', component:AddCompanyComponent},
   {path:'viewCompany', component:ViewCompanyComponent},
+  {path:'viewCompany/updateCompany', component:UpdateCompanyComponent},
   {path:'updateCompany',component:UpdateCompanyComponent},
   {path:'addIpo',component:AddIpoComponent},
   {path:'viewIpo' , component:ViewIPOComponent},
-  {path:'stockExchange', component:StockExchangeService}
+  {path:'viewIpo/updateIPO' , component:UpdateIPOComponent},
+  {path:'stockExchange', component:StockExchangeService},
+  {path:'updateIPO',component:UpdateIPOComponent},
+  {path:'userLanding',component:UserlandingComponent},
+  {path:'userLanding/home',component:HomeComponent},
+  {path:'adminservices/home',component:HomeComponent}
+
 ];
 
 @NgModule({

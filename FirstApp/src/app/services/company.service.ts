@@ -12,10 +12,10 @@ export class CompanyService {
   getAllCompanies(): Observable <Company[]>{
     return this.httpClient.get<Company[]>(this.httpUrl);
   }
-  saveCompany(company:Company){
+  saveCompany(company:Company): Observable<Company>{
     return this.httpClient.post<Company>(this.httpUrl, company);
   }
-  deleteCompanyDetails(id:number){
+  deleteCompanyDetails(id:number): Observable<Company>{
     return this.httpClient.delete<Company>(this.httpUrl+ id);
   }
   updateCompanyInfo(company:Company): Observable<Company> {

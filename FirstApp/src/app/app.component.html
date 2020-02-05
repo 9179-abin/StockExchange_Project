@@ -28,51 +28,44 @@
     <hr><hr>  
 	  <header class="bg-dark">
           <h1 class="display-3 text-center my-4 text-light lead ">Stock Market Exchange</h1>
-	  </header>
-	 
-  <router-outlet></router-outlet> 
-
-	    <!-- <hr>
-       
-      <table class="table-hover table-dark table-bordered-white table-lg">
-          <tr>
-              <td>{{user.id}}</td>
-              <td>{{user.name}}</td>
-              <td>{{user.email}}</td>
-              <td>{{user.phone}}</td>
-            </tr>
-            <tr>
-                <td>{{user1.id}}</td>
-                <td>{{user1.name}}</td>
-                <td>{{user1.email}}</td>
-                <td>{{user1.phone}}</td>
-              </tr>
-              <tr>
-                <td>{{user2.id}}</td>
-                <td>{{user2.name}}</td>
-                <td>{{user2.email}}</td>
-                <td>{{user2.phone}}</td>
-              </tr>
-              <tr>
-                <td>{{user3.id}}</td>
-                <td>{{user3.name}}</td>
-                <td>{{user.email}}</td>
-                <td>{{user3.phone}}</td>
-              </tr>
-              <tr>
-                <td>{{user4.id}}</td>
-                <td>{{user4.name}}</td>
-                <td>{{user4.email}}</td>
-                <td>{{user4.phone}}</td>
-              </tr>
-      </table> 
-     <p><a href='register'>Sign-in</a></p>
-      <p>{{user.name}}</p>
-      <input type="text" [(ngModel)]="user.name" class="form-control">
-      <button class="btn btn-primary" (click)="callMe()">Call</button> -->
-	   
-	
-	<!-- <div style="margin-top:500px;"></div> -->
+    </header>
+    <div style="min-height: 70vh;">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="#" class="navbar-brand"><img src="../assets/logo.png" alt="logo" height="30px" width="30px"></a>
+        <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+        
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a routerLink="home" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="adminservices" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="userLanding" class="nav-link">User Services</a>
+          </li>
+            
+            
+            <li class="nav-item">
+                <a routerLink="register" class="nav-link">Register</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="login" class="nav-link">Login</a>
+          </li>
+            
+        </ul>
+    </div>
+</nav>
+   
+<div *ngIf="isAdmin">
+  <app-admin-services></app-admin-services>
+</div>
+	<div *ngIf="!isAdmin">
+    <router-outlet></router-outlet>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -80,8 +73,7 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
-    <br>
-    <br>
+  </div>
     <footer class="page-footer font-small blue" style="padding-top: 100px;">
 
       <div class="footer-copyright text-center py-3 bg-dark text-white mb-3">© 2020 Copyright:

@@ -3,10 +3,8 @@
       {
         "id": 100,
         "name": "BSE",
-        "password1": "098uio",
-        "password2": "098uio",
-        "email": "dean@gmail.com",
-        "phone": 98634521
+        "aboutSE": "asdfgh",
+        "address": "asdfgh"
       },
       {
         "id": 101,

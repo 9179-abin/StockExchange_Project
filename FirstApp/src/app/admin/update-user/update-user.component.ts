@@ -34,8 +34,8 @@ export class UpdateUserComponent implements OnInit {
     });
     const id = localStorage.getItem('userId');
     if(+id > 0){
-      this.UserService.getUserById(+id).subscribe(user =>{
-        this.updateUser.patchValue(user);
+      this.UserService.getUserById(+id).subscribe(ip =>{
+        this.updateUser.patchValue(ip);
       })
     }
   }

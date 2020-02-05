@@ -1,59 +1,31 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a href="#" class="navbar-brand"><img src="../assets/logo.png" alt="logo" height="30px" width="30px"></a>
-    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
-    
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-            <a href="#" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-            <a href="#"  class="nav-link">About</a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link">Services</a>
-        </li>
-        
-        
-        <li class="nav-item">
-            <a href='upload' class="nav-link">Contact</a>
-        </li>
-        <li class="nav-item">
-            <a href='view' class="nav-link">View Users</a>
-        </li>
-        
-    </ul>
-    </div>
-</nav>
+
   <div class="container">
     <div class="row m-4">
         <div class="col" style="height: 70vh;">
             <form class="pt-4">
                 <div class="card shadow">
-                    <p class="h4 card-header text-center">SIGN-UP</p>
+                    <p class="h4 card-header text-center">LOGIN IN</p>
                     <div class="card-body bg-light">
 
                         <p class="card-text">Details:&nbsp;</p>
-                        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+                        <form >
 
                             <div class="input-group mt-3 mb-3 form-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Username</span>
                                 </div>
-                                <input id="username" type="text" class="form-control" formControlName="username" />
+                                <input id="username" type="text" class="form-control" />
                             </div>
 
                             <div class="input-group mb-3 form-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Password</span>
                                 </div>
-                                <input id="password1" type="password" class="form-control" formControlName="password1" />
+                                <input id="password1" type="password" class="form-control" />
                             </div>
 
                             <div class="input-group mb-3 form-group">
-                                <input id="password2" type="password" class="form-control" placeholder="Re-enter Password" formControlName="password2"/>
+                                <input id="password2" type="password" class="form-control" placeholder="Re-enter Password" />
                             </div>
                             <div class="form-check">
                                 <label class="form-check-label" for="check1">

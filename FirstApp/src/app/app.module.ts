@@ -17,6 +17,8 @@ import { ViewCompanyComponent } from './admin/view-company/view-company.componen
 import { UpdateCompanyComponent } from './admin/update-company/update-company.component';
 import { AddIpoComponent } from './admin/add-ipo/add-ipo.component';
 import { ViewIPOComponent } from './admin/view-ipo/view-ipo.component';
+import { UserlandingComponent } from './user/userlanding/userlanding.component';
+import { UpdateIPOComponent } from './admin/update-ipo/update-ipo.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { ViewIPOComponent } from './admin/view-ipo/view-ipo.component';
     ViewCompanyComponent,
     UpdateCompanyComponent,
     AddIpoComponent,
-    ViewIPOComponent
+    ViewIPOComponent,
+    UserlandingComponent,
+    UpdateIPOComponent
     
   ],
   imports: [
