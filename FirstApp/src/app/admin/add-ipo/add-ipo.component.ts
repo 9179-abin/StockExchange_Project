@@ -11,11 +11,7 @@ import { IpoService } from 'src/app/services/ipo.service';
 export class AddIpoComponent implements OnInit {
 
   addIPO : FormGroup;
-  navbarOpen = false;
-  
-  toggleNavbar() {
-  this.navbarOpen = !this.navbarOpen;
-  }
+ 
   constructor(private formBuilder:FormBuilder,private router:Router, private ipoService:IpoService) { }
 
   addIPODetails(){

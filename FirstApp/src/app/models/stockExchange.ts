@@ -1,4 +1,4 @@
-export class stockExchange {
+export class STOCK {
     id: number;
     name : string;
     aboutSE:string;

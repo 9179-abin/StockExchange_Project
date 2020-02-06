@@ -19,6 +19,12 @@ import { AddIpoComponent } from './admin/add-ipo/add-ipo.component';
 import { ViewIPOComponent } from './admin/view-ipo/view-ipo.component';
 import { UserlandingComponent } from './user/userlanding/userlanding.component';
 import { UpdateIPOComponent } from './admin/update-ipo/update-ipo.component';
+import { AddStocksComponent } from './admin/add-stocks/add-stocks.component';
+import { ViewStocksComponent } from './admin/view-stocks/view-stocks.component';
+import { UpdateStockComponent } from './admin/update-stock/update-stock.component';
+import { ComparechartsComponent } from './user/comparecharts/comparecharts.component';
+import { ComparesectorComponent } from './user/comparesector/comparesector.component';
+import { UserIpoViewComponent } from './user/user-ipo-view/user-ipo-view.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +42,13 @@ import { UpdateIPOComponent } from './admin/update-ipo/update-ipo.component';
     AddIpoComponent,
     ViewIPOComponent,
     UserlandingComponent,
-    UpdateIPOComponent
+    UpdateIPOComponent,
+    AddStocksComponent,
+    ViewStocksComponent,
+    UpdateStockComponent,
+    ComparechartsComponent,
+    ComparesectorComponent,
+    UserIpoViewComponent
     
   ],
   imports: [

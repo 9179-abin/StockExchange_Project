@@ -14,7 +14,7 @@ export class UpdateIPOComponent implements OnInit {
   constructor(private formBuilder:FormBuilder, private ipoService:IpoService, private router: Router) { }
   updateIPODetails(){
     this.ipoService.updateIPOInfo(this.updateIPO.value).subscribe(u => {
-      this.router.navigate(['view']);
+      this.router.navigate(['viewIpo']);
     })
   }
   ngOnInit() {

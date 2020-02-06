@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { stockExchange } from '../models/stockExchange';
+import { STOCK } from '../models/stockExchange';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -8,12 +8,24 @@ import { Observable } from 'rxjs';
 })
 export class StockExchangeService {
 
-  httpUrl:'http://localhost:1300/stockExchanges/'
+  private httpUrl = 'http://localhost:1300/stockExchanges/'
 
   constructor(private httpClient:HttpClient) { }
 
-   getAllStocks(): Observable <stockExchange[]> {
-    return this.httpClient.get<stockExchange[]>(this.httpUrl);
+   getAllStocks(): Observable < STOCK[]> {
+    return this.httpClient.get< STOCK[]>(this.httpUrl);
+  }
+  saveStocks(stockExchange:STOCK): Observable<STOCK>{
+    return this.httpClient.post<STOCK>(this.httpUrl,stockExchange);
+  }
+  deleteStockDetails(id:number): Observable<STOCK>{
+    return this.httpClient.delete<STOCK>(this.httpUrl+ id);  
+  }
+  updateStockInfo(stockExchange:STOCK): Observable<STOCK> {
+    return this.httpClient.put<STOCK>(this.httpUrl+stockExchange.id,stockExchange);
+  } 
+  getStockById(id:number): Observable<STOCK> {
+    return this.httpClient.get<STOCK>(this.httpUrl+id);
   }
 
 

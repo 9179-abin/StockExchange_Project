@@ -7,7 +7,7 @@ import { Company } from '../models/company';
 })
 export class CompanyService {
   
-  httpUrl='http://localhost:1100/company/';
+  private httpUrl='http://localhost:1100/company/';
   constructor(private httpClient:HttpClient) { }
   getAllCompanies(): Observable <Company[]>{
     return this.httpClient.get<Company[]>(this.httpUrl);

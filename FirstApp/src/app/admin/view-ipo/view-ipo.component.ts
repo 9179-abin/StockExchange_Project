@@ -11,11 +11,8 @@ import { Router } from '@angular/router';
 export class ViewIPOComponent implements OnInit {
 
   constructor(private ipoServices:IpoService, private router: Router) { }
-  navbarOpen = false;
+
    ipo:IPO[];
-  toggleNavbar() {
-      this.navbarOpen = !this.navbarOpen;
-    }
     deleteIPO(ipo:IPO){
       this.ipoServices.deleteIPODetails(ipo.id).subscribe();
       this.ipo = this.ipo.filter(u => u!==ipo);

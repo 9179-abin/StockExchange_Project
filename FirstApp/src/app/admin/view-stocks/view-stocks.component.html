@@ -1,0 +1,21 @@
+
+<br>
+<div class="container">
+<div class="text-center text-light bg-dark"><h1>Stock Exchange List</h1></div>
+<table class="table table-dark text-white">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>AdoutSE</th>
+        <th>Address</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor ="let stock of stocks">
+        <td>{{stock.id}}</td>
+        <td>{{stock.name}}</td>
+        <td>{{stock.aboutSE}}</td>
+        <td>{{stock.address}}</td>
+        <td><button class="btn btn-danger" (click)="deleteStocks(stock)">Delete</button></td>
+        <td><button class="btn btn-primary" (click)="updateStocks(stock)">Update</button></td>
+    </tr>
+</table></div>

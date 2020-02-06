@@ -32,11 +32,11 @@ export class UpdateUserComponent implements OnInit {
       phone: ['', Validators.required]
 
     });
-    const id = localStorage.getItem('userId');
+    const id = localStorage.getItem('companyId');
     if(+id > 0){
       this.UserService.getUserById(+id).subscribe(ip =>{
         this.updateUser.patchValue(ip);
-      })
+      });
     }
   }
   

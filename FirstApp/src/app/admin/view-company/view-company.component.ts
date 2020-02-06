@@ -24,7 +24,7 @@ export class ViewCompanyComponent implements OnInit {
    updateCompany(company:Company){
       localStorage.removeItem('companyId');
       localStorage.setItem('companyId',company.id.toString());
-      this.router.navigate(['updateCompany']);
+      this.router.navigate(['viewCompany']);
   }
   ngOnInit() {
       this.companyService.getAllCompanies().subscribe(data => {

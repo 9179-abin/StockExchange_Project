@@ -34,7 +34,7 @@ export class UpdateCompanyComponent implements OnInit {
       stockExchange: ['',Validators.required],
       sector : ['',Validators.required]
     });
-    const id = localStorage.getItem('CompanyId');
+    const id = localStorage.getItem('companyId');
     if(+id > 0){
       this.companyService.getCompanyById(+id).subscribe(company =>{
         this.updateCompany.patchValue(company);

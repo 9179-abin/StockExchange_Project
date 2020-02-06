@@ -12,11 +12,6 @@ export class ViewComponent implements OnInit {
 
   constructor(private userServices: UserService, private router: Router) { }
   users : User[];
-  navbarOpen = false;
-  
-  toggleNavbar() {
-    this.navbarOpen = !this.navbarOpen;
-  }
   deleteUser(user:User){
     this.userServices.deleteUser(user.id).subscribe();
     this.users = this.users.filter(u => u!==user);
