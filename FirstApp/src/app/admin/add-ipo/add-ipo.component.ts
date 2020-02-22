@@ -13,7 +13,10 @@ export class AddIpoComponent implements OnInit {
   addIPO : FormGroup;
  
   constructor(private formBuilder:FormBuilder,private router:Router, private ipoService:IpoService) { }
-
+  onSubmit(){
+    console.log(this.addIPO.value);
+    this.router.navigate(['/viewIpo']);
+  }
   addIPODetails(){
     this.ipoService.saveIPO(this.addIPO.value).subscribe(data => {
       console.log("IPO inserted successfully"+data);
@@ -24,7 +27,7 @@ export class AddIpoComponent implements OnInit {
 
     this.addIPO=this.formBuilder.group({
       id: ['', Validators.required],
-      name: ['', Validators.required],
+      companyName: ['', Validators.required],
       stockExchange: ['', Validators.required],
       priceShare: ['',Validators.required],
       noOfShare: ['',Validators.required],

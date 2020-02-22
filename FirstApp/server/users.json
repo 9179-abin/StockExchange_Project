@@ -31,6 +31,14 @@
       "password2": "iop098",
       "email": "david@gmail.com",
       "phone": "5632145"
+    },
+    {
+      "id": 118,
+      "name": "Ajax",
+      "password1": "ajax",
+      "password2": "ajax",
+      "email": "ajax@gmail.com",
+      "phone": "874325"
     }
   ]
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { UserService } from 'src/app/services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -12,7 +13,7 @@ export class RegisterComponent implements OnInit {
 
   // signupForm: FormGroup;
   registerUser: FormGroup;
-  constructor(private formBuilder: FormBuilder, private userService: UserService) { }
+  constructor(private formBuilder: FormBuilder, private userService: UserService, private router:Router) { }
   // onSubmit() {
   //    console.log(this.signupForm.value);
   //   }
@@ -29,6 +30,7 @@ export class RegisterComponent implements OnInit {
     }
     onSubmit() {
       console.log(this.registerUser.value);
+      this.router.navigate(['/userLanding']);
     }
   
   ngOnInit() {
@@ -42,7 +44,7 @@ export class RegisterComponent implements OnInit {
 
     this.registerUser = this.formBuilder.group({
       id: ['', Validators.required],
-      name: ['', Validators.required],
+      username: ['', Validators.required],
       password1: ['',Validators.required],
       password2: ['',Validators.required],
       email: ['', [Validators.required, Validators.email]],

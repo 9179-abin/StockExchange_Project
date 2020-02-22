@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Routes, RouterModule, Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,15 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
-  navbarOpen = false;
-  
-    toggleNavbar() {
-      this.navbarOpen = !this.navbarOpen;
-    }
-
+   
+  val:number
+  // constructor() { }
+  constructor(private route: ActivatedRoute) {}
   ngOnInit() {
+
+    this.route.data.subscribe(params => {
+      this.val = params['val'];
+      });
+      alert('Welcome : '+this.val);
   }
 
 }

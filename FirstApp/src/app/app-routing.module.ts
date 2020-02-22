@@ -13,7 +13,7 @@ import { UpdateCompanyComponent } from './admin/update-company/update-company.co
 import { AddIpoComponent } from './admin/add-ipo/add-ipo.component';
 import { ViewIPOComponent } from './admin/view-ipo/view-ipo.component';
 import { StockExchangeService } from './services/stock-exchange.service';
-import { AuthGuard } from './auth.guard';
+// import { AuthGuard } from './auth.guard';
 import { UpdateIPOComponent } from './admin/update-ipo/update-ipo.component';
 import { UserlandingComponent } from './user/userlanding/userlanding.component';
 import { AddStocksComponent } from './admin/add-stocks/add-stocks.component';
@@ -24,12 +24,12 @@ import { UserIpoViewComponent } from './user/user-ipo-view/user-ipo-view.compone
 
 
 const routes: Routes = [
-  {path: '', component:HomeComponent },
-  {path: 'home', component:HomeComponent },
+  {path: '', component:HomeComponent},
+  {path: 'home', component:HomeComponent},
   {path:'register', component:RegisterComponent},
   {path:'login' , component:LoginComponent},
   {path:'upload' , component:UploadComponent},
-  {path:'view', component:ViewComponent, canActivate: [AuthGuard]},
+  {path:'view', component:ViewComponent},
   {path:'view/update-user', component:UpdateUserComponent},
   {path:'adminservices', component:AdminServicesComponent},
   {path:'login/adminservices', component:AdminServicesComponent},

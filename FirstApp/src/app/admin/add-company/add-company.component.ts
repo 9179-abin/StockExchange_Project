@@ -25,16 +25,17 @@ export class AddCompanyComponent implements OnInit {
   
   onSubmit(){
     console.log(this.addCompany.value);
+    this.router.navigate(['/viewCompany']);
   }
   ngOnInit() {
     this.addCompany=this.formBuilder.group({
       id: ['', Validators.required],
-      name: ['', Validators.required],
+      companyName: ['', Validators.required],
       city: ['', Validators.required],
       state: ['',Validators.required],
       pincode: ['',Validators.required],
       turnover: ['',Validators.required],
-      aboutCompany: [],
+      aboutCompany: ['',Validators.required],
       stockExchange: ['',Validators.required],
       sector : ['',Validators.required]
       

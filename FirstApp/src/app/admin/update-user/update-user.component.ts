@@ -23,21 +23,22 @@ export class UpdateUserComponent implements OnInit {
     })
   }
   ngOnInit() {
+    const id = localStorage.getItem('userId');
+    // alert(id);
+    if(+id > 0){
+      this.UserService.getUserById(+id).subscribe(ip =>{
+        this.updateUser.patchValue(ip);
+      });
+    }
     this.updateUser=this.formBuilder.group({
       id:[],
-      name:['', Validators.required],
+      username:['', Validators.required],
       password1:['', Validators.required],
       password2:['', Validators.required],
       email: ['', Validators.required],
       phone: ['', Validators.required]
 
     });
-    const id = localStorage.getItem('companyId');
-    if(+id > 0){
-      this.UserService.getUserById(+id).subscribe(ip =>{
-        this.updateUser.patchValue(ip);
-      });
-    }
   }
   
 

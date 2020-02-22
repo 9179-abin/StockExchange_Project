@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Injectable, Inject } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { IPO } from '../models/ipo';
 
@@ -8,21 +8,21 @@ import { IPO } from '../models/ipo';
 })
 export class IpoService {
 
-  private httpUrl='http://localhost:1200/ipo/';
+  private httpUrl='http://localhost:8080/ipo/';
 
-  constructor(private httpClient:HttpClient ) { }
+  constructor(private httpClient:HttpClient, @Inject (HttpClient) private ht ) { }
 
    getAllIPO(): Observable <IPO[]> {
     return this.httpClient.get<IPO[]>(this.httpUrl);
   }
   saveIPO(ipo:IPO): Observable<IPO>{
-    return this.httpClient.post<IPO>(this.httpUrl,ipo);
+    return this.ht.post(this.httpUrl,ipo);
   }
   deleteIPODetails(id:number): Observable<IPO> {
     return this.httpClient.delete<IPO>(this.httpUrl+ id);
   }
   updateIPOInfo(ipo:IPO): Observable<IPO> {
-    return this.httpClient.put<IPO>(this.httpUrl+ipo.id,ipo);
+    return this.httpClient.put<IPO>(this.httpUrl,ipo);
   } 
   getIPOById(id:number): Observable<IPO> {
     return this.httpClient.get<IPO>(this.httpUrl+id);

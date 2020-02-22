@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { CompanyService } from 'src/app/services/company.service';
-import { Router } from '@angular/router';
+import { Router,Params } from '@angular/router';
 
 @Component({
   selector: 'app-update-company',
@@ -25,7 +25,7 @@ export class UpdateCompanyComponent implements OnInit {
   ngOnInit() {
     this.updateCompany=this.formBuilder.group({
       id: [],
-      name: ['', Validators.required],
+      companyName: ['', Validators.required],
       city: ['', Validators.required],
       state: ['',Validators.required],
       pincode: ['',Validators.required],

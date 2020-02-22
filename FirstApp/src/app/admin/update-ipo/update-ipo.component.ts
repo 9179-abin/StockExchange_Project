@@ -20,10 +20,10 @@ export class UpdateIPOComponent implements OnInit {
   ngOnInit() {
     this.updateIPO=this.formBuilder.group({
       id: ['', Validators.required],
-      name: ['', Validators.required],
+      companyName: ['', Validators.required],
       stockExchange: ['', Validators.required],
       priceShare: ['',Validators.required],
-      noOfShare: ['',Validators.required],
+      noOfShares: ['',Validators.required],
       address: [],
       city: ['', Validators.required],
       state: ['',Validators.required],
