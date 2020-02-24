@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { IPO } from 'src/app/models/ipo';
+import { IpoService } from 'src/app/services/ipo.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-ipo-view',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserIpoViewComponent implements OnInit {
 
-  constructor() { }
+  ipo:IPO[];
+  constructor(private ipoServices:IpoService, private router: Router) { }
 
   ngOnInit() {
+    this.ipoServices.getAllIPO().subscribe(data => {
+      this.ipo=data;
+
+      });
+    
   }
 
 }

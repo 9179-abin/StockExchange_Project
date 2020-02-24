@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
     this.route.data.subscribe(params => {
       this.val = params['val'];
       });
-      alert('Welcome : '+this.val);
+      // alert('Welcome : '+this.val);
   }
 
 }

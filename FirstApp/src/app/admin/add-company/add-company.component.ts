@@ -19,6 +19,7 @@ export class AddCompanyComponent implements OnInit {
   }
   addCompanyDetails(){
     this.companyService.saveCompany(this.addCompany.value).subscribe(data => {
+      alert("Successfully Inserted");
       console.log("Company inserted successfully"+data);
     });
   }

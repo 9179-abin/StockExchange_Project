@@ -11,8 +11,9 @@ import { Router } from '@angular/router';
 export class UpdateStockComponent implements OnInit {
   updateStocks:FormGroup;
   constructor(private formBuilder:FormBuilder,private stockservices:StockExchangeService, private router:Router) { }
-  updateIPODetails(){
+  updateStocksDetails(){
     this.stockservices.updateStockInfo(this.updateStocks.value).subscribe(u => {
+      alert("Successfully Updated");
       this.router.navigate(['viewstocks']);
     });
   }
@@ -20,7 +21,7 @@ export class UpdateStockComponent implements OnInit {
 
     this.updateStocks=this.formBuilder.group({
       id: ['', Validators.required],
-      name: ['', Validators.required],
+      stockExchanges: ['', Validators.required],
       aboutSE: ['', Validators.required],
       address: ['',Validators.required]
 

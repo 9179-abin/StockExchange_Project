@@ -18,6 +18,7 @@ export class UpdateCompanyComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private companyService: CompanyService, private router: Router) { }
   updateCompanyDetails(){
     this.companyService.updateCompanyInfo(this.updateCompany.value).subscribe(u => {
+      alert("Successfully Updated");
       this.router.navigate(['viewCompany']);
       
     });    

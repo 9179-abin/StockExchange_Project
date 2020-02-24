@@ -15,10 +15,12 @@ export class AddIpoComponent implements OnInit {
   constructor(private formBuilder:FormBuilder,private router:Router, private ipoService:IpoService) { }
   onSubmit(){
     console.log(this.addIPO.value);
+    alert("Successfully Inserted");
     this.router.navigate(['/viewIpo']);
   }
   addIPODetails(){
     this.ipoService.saveIPO(this.addIPO.value).subscribe(data => {
+      alert("Successfully Inserted");
       console.log("IPO inserted successfully"+data);
     });
   }

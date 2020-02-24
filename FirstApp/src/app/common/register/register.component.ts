@@ -30,6 +30,7 @@ export class RegisterComponent implements OnInit {
     }
     onSubmit() {
       console.log(this.registerUser.value);
+      alert("Successfully Inserted");
       this.router.navigate(['/userLanding']);
     }
   

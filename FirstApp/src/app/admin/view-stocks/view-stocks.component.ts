@@ -19,7 +19,7 @@ export class ViewStocksComponent implements OnInit {
   updateStocks(stockExchange:STOCK){
     localStorage.removeItem('stockId');
     localStorage.setItem('stockId',stockExchange.id.toString());
-    this.router.navigate(['update-stock']);
+    this.router.navigate(['updateStock']);
 }
 
   ngOnInit() {

@@ -12,7 +12,7 @@
     </tr>
     <tr *ngFor ="let stock of stocks">
         <td>{{stock.id}}</td>
-        <td>{{stock.name}}</td>
+        <td>{{stock.stockExchanges}}</td>
         <td>{{stock.aboutSE}}</td>
         <td>{{stock.address}}</td>
         <td><button class="btn btn-danger" (click)="deleteStocks(stock)">Delete</button></td>

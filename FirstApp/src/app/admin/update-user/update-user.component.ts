@@ -22,11 +22,16 @@ export class UpdateUserComponent implements OnInit {
       this.router.navigate(['view']);
     })
   }
+  onSubmit() {
+    console.log(this.updateUser.value);
+    this.router.navigate(['/view']);
+  }
   ngOnInit() {
     const id = localStorage.getItem('userId');
     // alert(id);
     if(+id > 0){
       this.UserService.getUserById(+id).subscribe(ip =>{
+        alert("Successfully Updated");
         this.updateUser.patchValue(ip);
       });
     }

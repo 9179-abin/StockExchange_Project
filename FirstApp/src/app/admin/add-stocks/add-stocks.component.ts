@@ -20,13 +20,15 @@ export class AddStocksComponent implements OnInit {
   }
   onSubmit() {
     console.log(this.addstocks.value);
+    alert("Successfully Inserted");
+    this.router.navigate(['/viewstocks']);
   }
 
   ngOnInit() {
 
     this.addstocks=this.formBuilder.group({
       id: ['', Validators.required],
-      name: ['', Validators.required],
+      stockExchanges: ['', Validators.required],
       aboutSE: ['', Validators.required],
       address: ['',Validators.required]
 

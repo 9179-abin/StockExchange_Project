@@ -21,6 +21,9 @@ import { ViewStocksComponent } from './admin/view-stocks/view-stocks.component';
 import { ComparesectorComponent } from './user/comparesector/comparesector.component';
 import { ComparechartsComponent } from './user/comparecharts/comparecharts.component';
 import { UserIpoViewComponent } from './user/user-ipo-view/user-ipo-view.component';
+import { UpdateStockComponent } from './admin/update-stock/update-stock.component';
+import { StockPrices } from './models/stockPrices';
+import { AddStockPricesComponent } from './admin/add-stock-prices/add-stock-prices.component';
 
 
 const routes: Routes = [
@@ -52,12 +55,14 @@ const routes: Routes = [
   {path:'viewIpo/updateIPO' , component:UpdateIPOComponent},
   {path:'stockExchange', component:StockExchangeService},
   {path:'updateIPO',component:UpdateIPOComponent},
+  {path:'addStockPrices',component:AddStockPricesComponent},
+  {path:'viewCompany/addStockPrices',component:AddStockPricesComponent},
   {path:'userLanding',component:UserlandingComponent},
   {path:'userLanding/home',component:HomeComponent},
   {path:'adminservices/home',component:HomeComponent},
   {path:"add-stocks",component:AddStocksComponent},
   {path:"viewstocks",component:ViewStocksComponent},
-  {path:"updateStock", component:UpdateCompanyComponent},
+  {path:"updateStock", component:UpdateStockComponent},
   {path:"comparesector",component:ComparesectorComponent},
   {path:"comparecharts",component:ComparechartsComponent},
   {path:"useripo",component:UserIpoViewComponent},
