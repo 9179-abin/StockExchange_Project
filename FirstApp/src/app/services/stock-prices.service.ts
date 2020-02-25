@@ -11,7 +11,7 @@ export class StockPricesService {
 
   constructor(private httpClient:HttpClient, @Inject (HttpClient) private ht ) { }
 
-  getAllIPO(): Observable <StockPrices[]> {
+  getAllStockPrices(): Observable <StockPrices[]> {
     return this.httpClient.get<StockPrices[]>(this.httpUrl);
   }
 
@@ -19,13 +19,13 @@ export class StockPricesService {
     return this.ht.post(this.httpUrl,stockprice);
   }
 
-  deleteIPODetails(id:number): Observable<StockPrices> {
+  deleteStockPriceDetails(id:number): Observable<StockPrices> {
     return this.httpClient.delete<StockPrices>(this.httpUrl+ id);
   }
-  updateIPOInfo(stockprice:StockPrices): Observable<StockPrices> {
+  updateStockPriceInfo(stockprice:StockPrices): Observable<StockPrices> {
     return this.httpClient.put<StockPrices>(this.httpUrl,stockprice);
   } 
-  getIPOById(id:number): Observable<StockPrices> {
+  getStockPriceById(id:number): Observable<StockPrices> {
     return this.httpClient.get<StockPrices>(this.httpUrl+id);
   }
 

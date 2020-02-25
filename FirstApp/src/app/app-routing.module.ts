@@ -24,6 +24,9 @@ import { UserIpoViewComponent } from './user/user-ipo-view/user-ipo-view.compone
 import { UpdateStockComponent } from './admin/update-stock/update-stock.component';
 import { StockPrices } from './models/stockPrices';
 import { AddStockPricesComponent } from './admin/add-stock-prices/add-stock-prices.component';
+import { ViewStockPricesComponent } from './admin/view-stock-prices/view-stock-prices.component';
+import { UpdateStockPriceComponent } from './admin/update-stock-price/update-stock-price.component';
+import { ActivateComponent } from './admin/activate/activate.component';
 
 
 const routes: Routes = [
@@ -32,7 +35,10 @@ const routes: Routes = [
   {path:'register', component:RegisterComponent},
   {path:'login' , component:LoginComponent},
   {path:'upload' , component:UploadComponent},
+  {path:'activate' , component:ActivateComponent},
   {path:'view', component:ViewComponent},
+  {path:'viewStockPrice', component:ViewStockPricesComponent},
+  {path:'updateStockPrice', component:UpdateStockPriceComponent},
   {path:'view/update-user', component:UpdateUserComponent},
   {path:'adminservices', component:AdminServicesComponent},
   {path:'login/adminservices', component:AdminServicesComponent},

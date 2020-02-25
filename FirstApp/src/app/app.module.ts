@@ -26,6 +26,9 @@ import { ComparechartsComponent } from './user/comparecharts/comparecharts.compo
 import { ComparesectorComponent } from './user/comparesector/comparesector.component';
 import { UserIpoViewComponent } from './user/user-ipo-view/user-ipo-view.component';
 import { AddStockPricesComponent } from './admin/add-stock-prices/add-stock-prices.component';
+import { ViewStockPricesComponent } from './admin/view-stock-prices/view-stock-prices.component';
+import { UpdateStockPriceComponent } from './admin/update-stock-price/update-stock-price.component';
+import { ActivateComponent } from './admin/activate/activate.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +53,10 @@ import { AddStockPricesComponent } from './admin/add-stock-prices/add-stock-pric
     ComparechartsComponent,
     ComparesectorComponent,
     UserIpoViewComponent,
-    AddStockPricesComponent
+    AddStockPricesComponent,
+    ViewStockPricesComponent,
+    UpdateStockPriceComponent,
+    ActivateComponent
     
   ],
   imports: [

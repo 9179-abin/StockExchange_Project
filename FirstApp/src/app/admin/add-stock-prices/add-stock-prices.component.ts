@@ -24,6 +24,7 @@ export class AddStockPricesComponent implements OnInit {
     this.stockPriceServices.saveStockPrices(this.addstocksprices.value).subscribe(data =>{
       alert("Successfully Inserted");
       console.log("Stock Prices inserted successfully"+data);
+      this.router.navigate(['viewStockPrice']);
     });
 
   }

@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +25,9 @@ public class UsersRestServiceController {
 	@Autowired
 	UsersRepo ur;
 	
+	@Autowired
+	JavaMailSender jms;
+	
 	@GetMapping("/users")
 	public List<Users> findAll() {
 		return ur.findAll();
@@ -38,7 +43,22 @@ public class UsersRestServiceController {
 	@PostMapping("/users")
 	public Users save(@RequestBody Users usr) {
 		Users us = ur.save(usr);
+		try {
+			SimpleMailMessage sm = new SimpleMailMessage();
+			sm.setFrom("abinjoshy002@gmail.com");
+			sm.setTo(us.getEmail());
+//			sm.setTo("abinjoshy002@gmail.com");
+			sm.setSubject("Testing Mail");
+//			sm.setText("This is testing mail");
+//			jms.send(sm);
+			sm.setText("Account created click on 'http://localhost:5400/activate?"+us.getEmail()+"'");
+			jms.send(sm);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 		return us;
+		
 	}
 	
 	@DeleteMapping("/users/{id}")

@@ -1,10 +1,9 @@
-<button type = "button" class = "btn btn-success float-right btn-lg my-0 mx-3"  routerLink="home">Logout</button>
 <br><div class="container">
     <div class="card shadow">
-        <p class="h4 card-header">Add Stock Prices</p>
+        <p class="h4 card-header">Update Stock Prices</p>
         <div class="card-body bg-light">
             <p class="card-text h6">Please fill the details:</p>
-            <form [formGroup]="addstocksprices" (ngSubmit)="onSubmit()">
+            <form [formGroup]="stockPrices" (ngSubmit)="onSubmit()">
                 <div class="input-group mt-3 mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text">Company Id</span>
@@ -40,7 +39,7 @@
                 </div>
                 <div class="d-flex no-gutters">
                     <div class="container text-center">
-                        <button type="submit" class="btn btn-success" (click)="addStockPriceDetails()" [disabled]="!addPricestocks.valid">Add</button>
+                        <button type="submit" class="btn btn-success" (click)="UpdateStockPriceDetails()" [disabled]="!stockPrices.valid">Update</button>
                         <button type="reset" class="btn btn-danger ml-2">Reset</button>
                     </div>
                 </div>
