@@ -1,0 +1,95 @@
+<app-navbaradmin></app-navbaradmin>
+<button type = "button" class = "btn btn-success float-right btn-lg my-1 mx-3"  routerLink="home">Logout</button>
+<br>
+<div class="container">
+<div class="card shadow">
+    <p class="h4 card-header">Add Company Details</p>
+    <div class="card-body bg-light">
+        <p class="card-text h6">Please fill the details:</p>
+        <form [formGroup]="addCompany" (ngSubmit)="onSubmit()">
+            <div class="input-group mt-3 mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Company Id</span>
+                </div>
+                <input type="number" id="uid" class="form-control" formControlName="id" />
+            </div>
+            <div class="input-group mt-3 mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Company Name</span>
+                </div>
+                <input type="text" id="name" class="form-control" formControlName="companyName" />
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label>City</label>
+                  <input type="text" class="form-control" id="city" formControlName="city">
+                </div>
+                <div class="form-group col-md-4">
+                  <label>State</label>
+                  <select id="state" class="form-control" formControlName="state">
+                    <option selected>Kerala</option>
+                    
+            <option>Gurgaon</option>
+            <option>Hyderabad</option>
+            <option>Tamil Nadu</option>
+            <option>Pune</option>
+            <option>Bangalore</option>
+            <option>Kolkata</option>
+            <option>Indore</option>
+            <option>Mumbai</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2">
+                  <label>Pincode</label>
+                  <input type="number" class="form-control" id="pincode" formControlName="pincode">
+                </div>
+              </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> Turnover in Rs.</span>
+                </div>
+                <input type="number" id="turnover" class="form-control" formControlName="turnover">
+                <div class="input-group-append">
+                    <span class="input-group-text">.00</span>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">About Company</span>
+                </div>
+                <textarea class="form-control" aria-label="With textarea" id="aboutCompany" formControlName="aboutCompany"></textarea>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text">Stock Exchange</label>
+                </div>
+                <select class="custom-select" id="stockExchange" formControlName="stockExchange">
+                    <option selected>Choose Stock Exchange...</option>
+                    <option value="BSE">BSE</option>
+                    <option value="NSE">NSE</option>
+                    <option value="NASDAQ">NASDAQ</option>
+                    <option value="NYSE">NYSE</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text">Sector</label>
+                </div>
+                <select class="custom-select" id="sector" formControlName="sector">
+                    <option selected>Choose Sector...</option>
+                    <option value="IT">IT</option>
+                    <option value="Infotainment">Infotainment</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Real-Estate">Real-Estate</option>
+                </select>
+            </div>
+            <div class="text-center">
+            <div class="col">
+                <button type="submit" class="btn btn-success" (click)="addCompanyDetails()" [disabled]="!addCompany.valid">Add</button>
+                <button type="reset" class="btn btn-danger ml-2">Reset</button>
+            </div></div>
+           
+			
+        </form>
+    </div>
+</div></div>

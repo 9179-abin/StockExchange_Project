@@ -1,0 +1,49 @@
+<app-navbaradmin></app-navbaradmin>
+<br><div class="container">
+    <div class="card shadow">
+        <p class="h4 card-header">Update Stock Prices</p>
+        <div class="card-body bg-light">
+            <p class="card-text h6">Please fill the details:</p>
+            <form [formGroup]="stockPrices" >
+                <div class="input-group mt-3 mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Company Id</span>
+                    </div>
+                    <input type="text" class="form-control" formControlName="cid" name="cid" disabled/>
+                </div>
+                <div class="input-group mt-3 mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Stock Exchange Name</span>
+                    </div>
+                    <input type="text" class="form-control" formControlName="stockExchange" />
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Current Price</span>
+                    </div>
+                    <input type="text" class="form-control" formControlName="currentPrice">
+                    <div class="input-group-append">
+                        <span class="input-group-text">.00</span>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Date</span>
+                    </div>
+                    <input type="date" class="form-control" formControlName="date"/>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Time</span>
+                    </div>
+                    <input type="time" class="form-control" formControlName="time"/>
+                </div>
+                <div class="d-flex no-gutters">
+                    <div class="container text-center">
+                        <button type="submit" class="btn btn-success" (click)="UpdateStockPriceDetails()" [disabled]="!stockPrices.valid">Update</button>
+                        <button type="reset" class="btn btn-danger ml-2">Reset</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div></div>

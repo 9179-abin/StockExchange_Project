@@ -1,0 +1,18 @@
+
+<app-navbaruser></app-navbaruser>
+<div class="container-fluid">
+    <div class="row my-2">
+        <div class="col-md-2 bg-transparent border">
+            <app-usersidenav></app-usersidenav>
+        </div>
+        <div class="col-12 col-sm-10 bg-transparent">
+<div class="row justify-content-center">
+<div *ngIf="user" class="w-auto border p-3 col-md-4 shadow rounded h-50 my-5">
+    <h4 class="text-center display-4"><img src="../../../assets/admin.png" class="img-thumbnail  bg-dark" width="70" height="70"> {{user.username}}</h4>
+    <h5 class="text-center">{{user.email}}</h5>
+    <h5 class="text-center">{{user.phone}}</h5>
+    <a class="btn btn-info btn-lg btn-block mt-3 mb-3 " (click)="updateUser()"><i class="fas fa-user-edit fa-lg"></i></a>
+  </div>
+</div>
+</div>
+</div>

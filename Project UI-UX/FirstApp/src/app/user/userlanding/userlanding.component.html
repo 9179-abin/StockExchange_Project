@@ -1,0 +1,67 @@
+<app-navbaruser></app-navbaruser>
+<button type = "button" class = "btn btn-success float-right btn-md my-1 mx-3" (click)="logout()">Logout</button>
+<!-- <hr>
+  <div class="container" style="width:auto;">
+    <div class="row m-4">
+        <div class="col" style="height: 70vh;">
+                <div class="card shadow">
+                    <p class="h4 card-header text-center">Services</p>
+                    <div class="card-body bg-light">
+
+                        <p class="card-text">Select Services:&nbsp;</p>
+                        <a class="btn btn-success btn-block" routerLink="useripo">IPOs</a>
+                        <a class="btn btn-success btn-block" routerLink="comparecharts">Compare Company</a>
+                        <a class="btn btn-success btn-block" routerLink="comparesector">Compare Sectors</a>
+        </div>
+    </div>
+</div></div></div> -->
+<div class="row justify-content-center my-3">
+    <div class="card-deck">
+        <div class="mx-1">
+        <div class="col">
+            <div class="card-shadow bg-trasparent text-center shadow" style="width:15rem;">
+                <a routerLink="user-info" class="bg-trasparent p-4 card-hover text-primary"> <i
+                        class="fas fa-user fa-10x"></i></a>
+                <div class=" bg-dark">
+                    <h5 class="card-title text-light">User Info</h5>
+                </div>
+            </div>
+        
+    </div></div>
+        <div class="mx-1">
+            <div class="col">
+                <div class="card-shadow bg-trasparent text-center shadow" style="width:15rem;">
+                    <a routerLink="useripo" class="bg-trasparent p-4 card-hover text-primary"> <i
+                            class="fas fa-hand-holding-usd fa-10x"></i></a>
+                    <div class=" bg-dark">
+                        <h5 class="card-title text-light">IPO List</h5>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="mx-1">
+            <div class="col">
+                <div class="card-shadow bg-trasparent text-center shadow" style="width:15rem;">
+                    <a routerLink="comparecharts" class="bg-trasparent p-4 card-hover text-primary"> <i
+                            class="fas fa-balance-scale fa-10x"></i></a>
+                            <div class=" bg-dark">
+                                <h5 class="card-title text-light">Compare Company</h5>
+                            </div>
+                </div>
+            </div>
+        </div>
+        <div class="mx-1">
+            <div class="col">
+                <div class="card-shadow bg-trasparent text-center shadow" style="width:15rem;">
+                    <a routerLink="comparesector" class="bg-trasparent p-4 card-hover text-primary"> <i
+                            class="fas fa-balance-scale fa-10x"></i></a>
+                            <div class=" bg-dark">
+                                <h5 class="card-title text-light">Compare Sector</h5>
+                            </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>

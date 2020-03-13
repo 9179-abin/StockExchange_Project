@@ -1,0 +1,39 @@
+<app-navbaruser></app-navbaruser>
+<div class="container-fluid">
+    <div class="row my-2">
+        <div class="col-md-2 bg-transparent border">
+            
+            <app-usersidenav></app-usersidenav>
+        </div>
+        <div class="col-12 col-sm-10 bg-transparent">
+
+<div class="container">
+    <br>
+<div class="card shadow">
+    <p class="h4 card-header">List of IPOs</p>
+    <div class="card-body bg-light">
+        <div class="table-responsible">
+        <table class="table table-borderless table-hover">
+            <thead>
+                <tr class="">
+                    <th scope="col">id</th>
+                    <th scope="col">Company Name</th>
+                    <th scope="col">Stock Exchanges</th>
+                    <th scope="col">About</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let ipo of ipo">
+                    <th scope="row">{{ipo.id}}</th>
+                    <td>{{ipo.companyName}}</td>
+                    <td>{{ipo.stockExchange}}</td>
+                    <td>{{ipo.address}}, {{ipo.city}}, {{ipo.state}}</td>
+                </tr>
+            </tbody>
+        </table></div>
+
+    </div>
+</div></div>
+</div>
+</div>

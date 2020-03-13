@@ -1,0 +1,108 @@
+<app-navbaruser></app-navbaruser>
+
+<div class="container-fluid">
+    <div class="row my-2">
+        <div class="col-md-2 bg-transparent border">
+            <app-usersidenav></app-usersidenav>
+        </div>
+        <div class="col-12 col-sm-10 bg-transparent">
+
+
+<!-- <div class="container" style="width:auto;">
+    <div class="row m-4">
+        <div class="col" style="height: 70vh;">
+            <div class="card shadow h-50">
+                <p class="h4 card-header text-center">Compare Company Charts</p>
+                <form class="form-group border p-5 border-curved mt-5"  [formGroup]="compare">
+                    <label for="companyname">Company Name 1:</label><br>
+                    <input list="company1"  class="form-control" formControlName="comp" >
+                    <datalist id="company1">
+                        <option *ngFor="let comp of company" value={{comp.id}}>{{comp.companyName}}</option>
+
+
+                    </datalist><br>
+                    
+                        <label>Company 1 Stock Exchange</label>
+                   
+                    <select class="custom-select form-control" id="stockExchange" formControlName="stock1">
+                        <option value="BSE">BSE</option>
+                        <option value="NSE">NSE</option>
+                        <option value="NASDAQ">NASDAQ</option>
+                        <option value="NYSE">NYSE</option>
+                    </select><br><br>
+                    <label for="companyname">Company Name 2:</label>
+                    <input list="company2"  class="form-control" formControlName="compa" >
+                    <datalist id="company2">
+                        <option *ngFor="let comp of company" value={{comp.id}}>{{comp.companyName}}</option>
+
+
+                    </datalist><br>
+                    <label>Company 2 Stock Exchange</label>
+                   
+                    <select class="custom-select form-control" id="stockExchange" formControlName="stock2">
+                        <option value="BSE">BSE</option>
+                        <option value="NSE">NSE</option>
+                        <option value="NASDAQ">NASDAQ</option>
+                        <option value="NYSE">NYSE</option>
+                    </select><br>
+
+                 
+                        <br><label class="input-group-text">Start Date</label>
+                        <input type="date" class="form-control" formControlName="startdate"/>
+
+                        
+                        <br><label class="input-group-text">End Date</label>
+                        <input type="date" class="form-control" formControlName="enddate"/><br>
+
+                    <div class="text-center">
+                        <div class="col">
+                            <button type="submit" class="btn btn-success"  (click)="compareCompany()">Compare</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="container">
+    <div class="card shadow">
+        <p class="h4 card-header">Compare Company</p>
+        <div class="card-body bg-light">
+            <p class="card-text h6">Please fill the details:</p>
+            <form [formGroup]="compare" >
+                <div class="input-group mt-3 mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Company 1</span>
+                    </div>
+                    <input list="company1"  class="form-control" formControlName="comp" >
+                    <datalist id="company1">
+                        <option *ngFor="let comp of company" value={{comp.id}}>{{comp.companyName}}</option>
+                    </datalist>
+                </div>
+               
+                <div class="input-group mt-3 mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Company 2</span>
+                    </div>
+                    <input list="company2"  class="form-control" formControlName="compa" >
+                    <datalist id="company2">
+                        <option *ngFor="let comp of company" value={{comp.id}}>{{comp.companyName}}</option>
+                    </datalist>
+                </div>
+               
+                <div class="text-center">
+                <div class="col">
+                    <button type="submit" class="btn btn-success"  (click)="compareCompany()">Compare</button>
+                    <button type="reset" class="btn btn-danger ml-2">Reset</button>
+                </div></div>
+               
+                
+            </form>
+        </div>
+    </div></div>
+
+
+
+</div>
+</div>

@@ -1,0 +1,38 @@
+<app-navbaruser></app-navbaruser>
+<div class="container-fluid">
+    <div class="row my-2">
+        <div class="col-md-2 bg-transparent border">
+            <app-usersidenav></app-usersidenav>
+        </div>
+        <div class="col-12 col-sm-10 bg-transparent">
+
+
+            <div class="boxChart__container">
+                <div>
+                  <highcharts-chart
+                    id="container"
+                    [Highcharts]="Highcharts"
+                    [constructorType]="chartConstructor"
+                    [options]="chartOptions"
+                    [callbackFunction]="chartCallback"
+                    [(update)]="updateFlag"
+                    [oneToOne]="true"
+                    style="width: 100%; height: 400px; display: block;"
+                  >
+                  </highcharts-chart>
+                </div>
+              </div>
+ <!-- <div class="container-fluid">
+    <div *ngIf="getFirstDataComplete && getSecondDataComplete"
+        class="row justify-content-center mt-5">
+        <highcharts-chart [Highcharts]="chartOne" [options]="chartOneOptions">
+        </highcharts-chart>
+    </div>
+</div> -->
+
+
+
+</div>
+
+ </div>
+ </div>
